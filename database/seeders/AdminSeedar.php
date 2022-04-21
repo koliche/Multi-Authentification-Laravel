@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use App\Models\Admin;   
 class AdminSeedar extends Seeder
 {
     /**
@@ -13,6 +13,6 @@ class AdminSeedar extends Seeder
      */
     public function run()
     {
-        //
+        Admin::factory(1)->create();
     }
 }
