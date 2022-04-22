@@ -24,4 +24,9 @@ class AdminController extends Controller
             return back()->with('error','Invailed Email Or Password');
         }
     }
+
+    public function AdminLogout(){
+        Auth::guard('admin')->logout();
+        return redirect()->route('login_form')->with('error','Admin Logout Successfully !');
+    }
 }

@@ -22,6 +22,7 @@ Route::post('/login/owner',[AdminController::class,'Login'])->name('admin.login'
 
 Route::get('/dashboard',[AdminController::class,'Dashboard'])->name('admin.dashboard')->middleware("admin");
 
+Route::get('/logout',[AdminController::class,'AdminLogout'])->name('admin.logout')->middleware("admin");
 });
 /*====================== End Admin Route ==========================*/
 

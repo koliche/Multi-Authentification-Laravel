@@ -70,7 +70,7 @@
                                     </label>
                                 </div>
                                 <div class="form-group">
-                                    <a class="registration" href=" ">Create new account</a><br>
+                                    <!--<a class="registration" href=" ">Create new account</a><br>-->
                                     <a href=" " class="text-white">I forgot my password</a>
                                     <button type="submit" class="btn btn-blue">Login</button>
                                 </div>
