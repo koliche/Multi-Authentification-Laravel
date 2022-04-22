@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-
+use App\Http\Controllers\EditorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +26,18 @@ Route::get('/logout',[AdminController::class,'AdminLogout'])->name('admin.logout
 });
 /*====================== End Admin Route ==========================*/
 
+/*====================== Editor Route ==========================*/
+Route::prefix('editor')->group(function(){
 
+    Route::get('/login',[EditorController::class,'EditorIndex'])->name('editor_login_form');
+    
+    Route::post('/login/owner',[EditorController::class,'EditorLogin'])->name('editor.login');
+    
+    Route::get('/dashboard',[EditorController::class,'EditorDashboard'])->name('editor.dashboard')->middleware("editor");
+    
+    Route::get('/logout',[EditorController::class,'EditorLogout'])->name('editor.logout')->middleware("editor");
+    });
+    /*====================== End Editor Route ==========================*/
 
 
 Route::get('/', function () {

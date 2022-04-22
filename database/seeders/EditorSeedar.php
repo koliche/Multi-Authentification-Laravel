@@ -4,15 +4,15 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Editor; 
-class DatabaseSeeder extends Seeder
+class EditorSeedar extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-      \App\Models\Editor::factory(1)->create();
+        Editor::factory(1)->create();
     }
 }
